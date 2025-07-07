@@ -1,0 +1,558 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.left-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #1A77F2;
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 1024px;
+    box-sizing: border-box;
+}
+
+.location img {
+    vertical-align: text-bottom;
+    height: 25px;
+    width: 25px;
+}
+
+.location span {
+    color: #fff;
+    font-family: "satoshi", sans-serif;
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.location p {
+    font-family: "satoshi", sans-serif;
+    font-weight: medium;
+    text-align: left;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 15px;
+    color: #ffffffc8;
+}
+
+.current-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-weather img {
+    margin-top: 60px;
+    width: 225px;
+    height: 201.81px;
+}
+
+.current-weather h1 {
+    text-align: center;
+    margin-top: -20px;
+    font-family: "satoshi", sans-serif;
+    font-weight: 500;
+    font-size: 90px;
+    color: #fff;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    opacity: 0.5;
+
+}
+
+.weather-element {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.weather-element p {
+    font-family: "satoshi", sans-serif;
+    background: #efecec4a;
+    /* text-shadow: 2px 2px 5px black; */
+    border-radius: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 10px;
+    padding: 10px 10px;
+}
+
+.weather-element span {
+    font-family: "satoshi", sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-end;
+    /* text-shadow: 1px 1px 5px black; */
+    color: #ffffff;
+    margin-top: -23px;
+
+}
+
+.surise-sunset {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    margin-top: 0px;
+}
+
+.sunrise,
+.sunset {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #efecec4a;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* .sunrise,.sunset, img {
+    margin-left: 5px;
+} */
+.sunrise,
+.sunset span {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "satoshi", sans-serif;
+}
+
+.sunrise p {
+    color: #ffffff7f;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "satoshi", sans-serif;
+    margin-left: 5px;
+}
+
+.sunset p {
+    color: #ffffff91;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "satoshi", sans-serif;
+    margin-left: 5px;
+
+}
+
+/* right section  styles */
+
+.right-section {
+    flex: 2;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.date h3 {
+    font-family: "satoshi", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #000000;
+    margin-left: 20px;
+    margin-bottom: 0%;
+}
+
+.date p {
+    font-family: "satoshi", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #12111189;
+    margin-left: 22px;
+    margin-top: 5%;
+}
+
+.searchbar {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.searchbar img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.searchbar span {
+    position: relative;
+    top: 50%;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+
+}
+
+.searchbar input {
+    font-family: "satoshi", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px 10px 10px 40px;
+    border: none;
+    background: #0000000a;
+    color: #615d5d;
+    width: 100%;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.underline1 {
+    width: 99%;
+    height: 3px;
+    background-color: #fff;
+    opacity: 0.7;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    background: rgb(211 203 203/18%);
+    border-radius: 25px;
+    padding: 5px 6px;
+}
+
+
+.button button {
+    font-family: "satoshi", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    width: 25%;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.button button:last-child {
+    background: #1e285f;
+    color: rgb(255, 255, 255)
+}
+
+.button button:hover {
+    background: #1e285f;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 0.5s ease-out;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0px;
+    gap: 25px;
+
+
+}
+
+.alldays {
+    flex: 1 1 150px;
+    /* allows cards to shrink and grow */
+    max-width: 200px;
+    height: 300px;
+    background: #ffffffc7;
+    border-radius: 25px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.alldays:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+    transform: translateY(-8px);
+     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.alldays p {
+    font-family: "satoshi", sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+}
+
+.alldays img {
+    height: 137px;
+    width: 150px;
+}
+
+.alldays h3 {
+    font-family: "satoshi", sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+    margin-top: 12px;
+
+}
+
+.cities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 15px;
+    gap: 10px;
+}
+
+.place p {
+    font-family: "satoshi", sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    color: #5e5a5a96;
+}
+
+.allplace span {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.allplace span:first-child {
+    color: #222020bf;
+}
+
+.cities-info {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 150px;
+    margin: 0px 0px;
+
+}
+
+.cities-info-1,
+.cities-info-2 {
+    display: flex;
+    flex: 1 1 45%;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffffe4;
+    border-radius: 32px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.citi-text span {
+    font-family: "satoshi", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    margin-top: 20px;
+    margin-left: 2px;
+    line-height: 1.5;
+}
+
+
+.citi-text1 span {
+    font-family: "satoshi", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    margin-left: 2px;
+    line-height: 1.5;
+}
+
+.cities-info-1,
+.citi-text h3 {
+    font-family: "satoshi", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0px 15px;
+    line-height: 0.8;
+}
+
+.cities-info-2,
+h3 {
+    font-family: "satoshi", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0px 15px;
+    line-height: 0.8;
+}
+
+.cities-info-1 img {
+    width: 94px;
+    height: 84.12px;
+
+}
+
+.cities-info-2 img {
+    width: 94px;
+    height: 84.12px;
+
+}
+
+.cities-info-1,
+h2 {
+    font-family: "satoshi", sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    color: #000000;
+    margin: 0px 25px;
+}
+
+.cities-info-2,
+h2 {
+    font-family: "satoshi", sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    color: #000000;
+    margin: 0px 25px;
+}
+
+
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        /* sMakes right-section come after left-section */
+    }
+
+    .left-section,
+    .right-section {
+        max-width: 100%;
+        width: 100%;
+
+    }
+
+    .current-weather img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .row {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .alldays {
+        flex: 1 1 250px;
+        max-width: 200px;
+    }
+
+    .alldays img {
+        width: 137px;
+        height: 150px;
+
+    }
+
+    .alldays h3 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .alldays p {
+        font-size: 30px;
+    }
+
+    .cities-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cities-info-1,
+    .cities-info-2 {
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    .cities {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 150px;
+
+    }
+
+    .place,
+    .allplace {
+        /* flex: 1; */
+        text-align: center;
+    }
+
+    .cities-info-1 h2 {
+        font-size: 30px;
+    }
+
+    .citi-text h3 {
+        font-size: 20px;
+    }
+
+    .citi-text span {
+        font-size: 13px;
+    }
+
+    .cities-info-2 h2 {
+        font-size: 30px;
+    }
+
+    .citi-text1 h3 {
+        font-size: 20px;
+    }
+
+    .citi-text1 span {
+        font-size: 13px;
+    }
+
+    /* .allplace {
+        justify-content: flex-end;
+        width: 100%;
+    } */
+    .button button {
+        font-size: 12px;
+    }
+    .cities-info-1 img{
+        width: 60px;
+        height: 60px;
+    }
+    .cities-info-2 img{
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .alldays {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .left-section {
+        max-width: 100%;
+        width: 100%;
+    }
+}
