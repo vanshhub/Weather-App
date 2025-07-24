@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="C:\Users\91749\OneDrive\Desktop\wheather app\STYLE\wheather.css">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap"
         rel="stylesheet">
-        <link rel="icon" href="C:\Users\91749\OneDrive\Desktop\wheather app\IMAGES\partly_cloudy.png" type="image/svg+xml">
+    <link rel="icon" href="C:\Users\91749\OneDrive\Desktop\wheather app\INDEX\IMAGES\Group 7.png" type="image/svg+xml">
 </head>
 
 <body>
@@ -16,35 +16,42 @@
         <div class="left-section">
             <!----------------------------------------------- Left side content ------------------------------------>
             <div class="location">
-                <img src="C:\Users\91749\OneDrive\Desktop\wheather app\IMAGES\location.png" alt="location">
-                <span>Wangoan,Maharashtra</span>
-                <p>Today, 20 Jan 2023</p>
+                <img src="C:\Users\91749\OneDrive\Desktop\wheather app\INDEX\IMAGES\location.png" alt="location">
+                <span id="location">Wangoan,Maharashtra</span>
+                <p id="current-date">Today, 20 Jan 2023</p>
             </div>
             <div class="current-weather">
-                <img src="C:\Users\91749\OneDrive\Desktop\wheather app\IMAGES\partly_cloudy.png" alt="cloudy">
-                <h1>18°C</h1>
+                <img src="C:\Users\91749\OneDrive\Desktop\wheather app\INDEX\IMAGES\partly_cloudy.png" alt="cloudy"
+                    id="main-weather-icon">
+                <h1 id="temperature">18°C</h1>
                 <div class="line">
                     <hr>
                 </div>
             </div>
             <div class="weather-element">
-                <p>Precipitation:<span>98%</span></p>
-                <p>Humidity:<span>77%</span></p>
-                <p>Wind:<span>6km/h</span></p>
+                <p>Precipitation:
+                    <span id="precipitation">98%</span>
+                </p>
+                <p>Humidity:
+                    <span id="humidity">77%</span>
+                </p>
+                <p>Wind:
+                    <span id="wind">6km/h</span>
+                </p>
             </div>
             <div class="underline">
                 <hr>
             </div>
             <div class="sunrise-sunset">
                 <div class="sunrise">
-                    <img src="C:\Users\91749\OneDrive\Desktop\wheather app\IMAGES\sun.png"alt="sunrise">
-                    <span>5:30 AM</span>
-                    <p>4 hours ago</p>
+                    <img src="C:\Users\91749\OneDrive\Desktop\wheather app\INDEX\IMAGES\sun.png" alt="sunrise">
+                    <span id="sunrise-time">5:30 AM</span>
+                    <p id="sunriseTime">4 hours ago</p>
                 </div>
                 <div class="sunset">
-                    <img src="C:\Users\91749\OneDrive\Desktop\wheather app\IMAGES\sun-fog.png" alt="sunset">
-                    <span>5:30 AM</span>
-                    <p>4 hours ago</p>
+                    <img src="C:\Users\91749\OneDrive\Desktop\wheather app\INDEX\IMAGES\sun-fog.png" alt="sunset">
+                    <span id="sunset-time">5:30 AM</span>
+                    <p id="sunsetTime">4 hours ago</p>
                 </div>
             </div>
         </div>
@@ -52,47 +59,47 @@
         <div class="right-section">
             <div class="top-header">
                 <div class="date">
-                    <h3>January 2025</h3>
-                    <p>Monday, 1 june 2025</p>
+                    <h3 id="headermonth">January 2025</h3>
+                    <p id="headerday">Monday, 1 june 2025</p>
                 </div>
                 <div class="searchbar">
-                    <img src="C:\Users\91749\OneDrive\Desktop\wheather app\IMAGES\search-normal.png" alt="search">
-                    <input type="text" placeholder="Search cities">
-                    <span><img src="C:\Users\91749\OneDrive\Desktop\wheather app\IMAGES\Vector.png" alt="moon"></span>
+                    <img src="IMAGES/search-normal.png" alt="search">
+                    <input type="text" placeholder="Search cities" id="search-input">
+                    <span><img src="IMAGES\Vector.png" alt="moon"></span>
                 </div>
             </div>
             <div class="underline1">
                 <hr>
             </div>
             <div class="button">
-                <button>Today</button>
-                <button>Tommorow</button>
-                <button>Next 7 Days</button>
+                <button id="todayBtn">Today</button>
+                <button id="tomorrowBtn">Tommorow</button>
+                <button id="next7Btn">Next 7 Days</button>
             </div>
             <div class="row">
                 <div class="alldays">
                     <p>Tuesday</p>
-                    <img src="C:\Users\91749\OneDrive\Desktop\wheather app\IMAGES\partly_cloudy.png" alt=" cloudy">
+                    <img src="IMAGES/partly_cloudy.png" alt=" cloudy">
                     <h3>18°</h3>
                 </div>
                 <div class="alldays">
                     <p>Wednesday</p>
-                    <img src="C:\Users\91749\OneDrive\Desktop\wheather app\IMAGES\Rain_storm.png" alt=" cloudy">
+                    <img src="IMAGES/Rain_storm.png" alt=" cloudy">
                     <h3>20°</h3>
                 </div>
                 <div class="alldays">
                     <p>Thursday</p>
-                    <img src="C:\Users\91749\OneDrive\Desktop\wheather app\IMAGES\partly_cloudy.png"alt=" cloudy">
+                    <img src="IMAGES/partly_cloudy.png" alt=" cloudy">
                     <h3>23°</h3>
                 </div>
                 <div class="alldays">
                     <p>Friday</p>
-                    <img src="C:\Users\91749\OneDrive\Desktop\wheather app\IMAGES\snowy.png" alt=" cloudy">
+                    <img src="IMAGES/snowy.png" alt=" cloudy">
                     <h3>13°</h3>
                 </div>
                 <div class="alldays">
                     <p>Saturday</p>
-                    <img src="C:\Users\91749\OneDrive\Desktop\wheather app\IMAGES\slight_touch_happyday.png" alt=" cloudy">
+                    <img src="IMAGES/slight_touch_happyday.png" alt=" cloudy">
                     <h3>24°</h3>
                 </div>
             </div>
@@ -109,27 +116,29 @@
                 </div>
             </div>
             <div class="cities-info">
-                <div class="cities-info-1">
+                <div class="cities-info-1 city-card" data-city="surat">
                     <div class="citi-text">
-                        <h3>Rawaheng<br>
-                            <span>Mostly Sunny</span>
+                        <h3>Mumbai<br>
+                            <span>Loading...</span>
                         </h3>
                     </div>
-                    <img src="C:\Users\91749\OneDrive\Desktop\wheather app\IMAGES\partly_cloudy.png" alt="cloudyimg">
-                    <h2>20°</h2>
+                    <img src="IMAGES/partly_cloudy.png" alt="cloudyimg">
+                    <h2>--°</h2>
                 </div>
-                <div class="cities-info-2">
+
+                <div class="cities-info-2 city-card" data-city="pune">
                     <div class="citi-text1">
-                        <h3>Ranjingan<br>
-                            <span>Mostly sunny</span>
+                        <h3>Gorai<br>
+                            <span>Loading...</span>
                         </h3>
                     </div>
-                    <img src="C:\Users\91749\OneDrive\Desktop\wheather app\IMAGES\partly_cloudy.png" alt="cloudyimg">
-                    <h2>21°</h2>
+                    <img src="IMAGES/partly_cloudy.png" alt="cloudyimg">
+                    <h2>--°</h2>
                 </div>
             </div>
         </div>
     </div>
+    <script src="C:\Users\91749\OneDrive\Desktop\wheather app\SCRIPT\script.js"></script>
 </body>
 
 </html>
