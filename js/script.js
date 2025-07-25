@@ -376,10 +376,11 @@ document.getElementById("search-input").addEventListener("keypress", function (e
       document.getElementById("search-input").blur(); // ✅ closes mobile keyboard
       searchCityWeather(city, scrollToLeftSectionIfMobile);// ✅ scroll callback
       e.target.value="";
-    } else {
+    } 
+  }
+  else {
       alert("Please enter a city name.");
     }
-  }
 });
 
 
