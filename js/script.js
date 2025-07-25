@@ -125,7 +125,7 @@ function updateNext7DaysForecast() {
 }
 // Called when user searches a city
 // Updates the left section (Today) and cards (next 5 days)
-function searchCityWeather(city) {
+function searchCityWeather(city, callback) {
   currentCity = city;
   fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${currentCity}&days=6`)
     .then(res => res.json())
@@ -160,8 +160,6 @@ function searchCityWeather(city) {
         weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
       });
 
-
-
       //  Update Forecast Cards for Next 5 Days
       const allCards = document.querySelectorAll(".alldays");
       for (let i = 1; i < forecastDays.length && i - 1 < allCards.length; i++) {
@@ -185,12 +183,13 @@ function searchCityWeather(city) {
       for (let j = forecastDays.length - 1; j < allCards.length; j++) {
         allCards[j].style.display = "none";
       }
+
+      // ✅ Callback after UI is fully updated
+      if (callback) callback();
     })
     .catch(err => {
       console.error("Search failed:", err);
-      alert("City not found. Please try another name.");
-    });
-}
+
 
 // Clicking on a card (e.g., Friday) shows full info in left section
 function setupForecastCardClicks() {
