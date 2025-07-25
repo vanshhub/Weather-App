@@ -326,11 +326,18 @@ function showLeftPanel(data) {
   });
 }
 
-function scrollToLeftSectionIfMobile() {
+function scrollToLeftSectionIfMobile()
+{
+  // Check screen width to target mobile only
   if (window.innerWidth <= 768) {
     const leftSection = document.querySelector(".left-section");
     if (leftSection) {
-      leftSection.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        leftSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }, 100); // Give content a bit of time to update
     }
   }
 }
