@@ -226,8 +226,8 @@ function showDetailedForecast(dayData) {
   document.getElementById("precipitation").textContent = `${dayData.day.daily_chance_of_rain}%`;
   document.getElementById("sunrise-time").textContent = dayData.astro.sunrise;
   document.getElementById("sunset-time").textContent = dayData.astro.sunset;
-  document.getElementById("sunriseTime").textContent = getTimeDifferenceLabel(today.astro.sunrise, location.localtime);
-  document.getElementById("sunsetTime").textContent = getTimeDifferenceLabel(today.astro.sunset, location.localtime);
+  document.getElementById("sunriseTime").textContent = getTimeDifferenceLabel(dayData.astro.sunrise, location.localtime);
+  document.getElementById("sunsetTime").textContent = getTimeDifferenceLabel(dayData.astro.sunset, location.localtime);
 
 
   document.getElementById("headermonth").textContent = date.toLocaleDateString("en-IN", {
