@@ -329,21 +329,28 @@ function showLeftPanel(data) {
   scrollToLeftSectionIfMobile();
 }
 
-function scrollToLeftSectionIfMobile()
-{
-  // Check screen width to target mobile only
+function scrollToLeftSectionIfMobile() {
   if (window.innerWidth <= 768) {
+    // Close any open keyboard (iOS, Android)
+    document.activeElement.blur();
+
     const leftSection = document.querySelector(".left-section");
+
     if (leftSection) {
       setTimeout(() => {
+        // Scroll into view
         leftSection.scrollIntoView({
           behavior: "smooth",
           block: "start"
         });
-      }, 100); // Give content a bit of time to update
+
+        // Manual scroll nudge (fallback for iOS/Android quirks)
+        window.scrollBy(0, -80);
+      }, 300); // Slight delay ensures layout is updated & keyboard closed
     }
   }
 }
+
 
 // Event Listener
 document.getElementById("todayBtn").addEventListener("click", () => {
