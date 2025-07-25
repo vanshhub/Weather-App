@@ -256,36 +256,6 @@ function getTimeDifferenceLabel(timeStr, locationTime) {
   if (diffMs > 0) return `${diffHrs} hours ago`;
   else return `in ${diffHrs} hours`;
 }
-
-// Event Listener
-document.getElementById("todayBtn").addEventListener("click", () => updateSingleDayForecast(0, "Today"));
-document.getElementById("tomorrowBtn").addEventListener("click", () => updateSingleDayForecast(1, "Tomorrow"));
-document.getElementById("next7Btn").addEventListener("click", updateNext7DaysForecast);
-
-// Runs when user clicks into input box (optional)
-document.getElementById("search-input").addEventListener("click", () => {
-  const city = document.getElementById("search-input").value.trim();
-  if (city) searchCityWeather(city);
-});
-// Event listener when pressed enter button
-document.getElementById("search-input").addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    const city = e.target.value.trim();
-    if (city) searchCityWeather(city);
-  }
-});
-// Event listener when location is added and then pressed enter button
-document.getElementById("search-input").addEventListener("keypress", function (e) {
-  if (e.key === "Enter") {
-    const city = e.target.value.trim();
-    if (city) {
-      searchCityWeather(city);
-    } else {
-      alert("Please enter a city name.");
-    }
-  }
-});
-
 function updateCityCards() {
   const cards = document.querySelectorAll(".city-card");
 
@@ -355,6 +325,53 @@ function showLeftPanel(data) {
     weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
   });
 }
+
+function scrollToLeftSectionIfMobile() {
+  if (window.innerWidth <= 768) {
+    const leftSection = document.getElementById("left-section");
+    if (leftSection) {
+      leftSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+}
+
+// Event Listener
+document.getElementById("todayBtn").addEventListener("click", () => {
+  updateSingleDayForecast(0, "Today");
+  scrollToLeftSectionIfMobile();
+});
+
+document.getElementById("tomorrowBtn").addEventListener("click", () => {
+  updateSingleDayForecast(1, "Tomorrow");
+  scrollToLeftSectionIfMobile();
+});
+document.getElementById("next7Btn").addEventListener("click", updateNext7DaysForecast);
+
+// Runs when user clicks into input box (optional)
+document.getElementById("search-input").addEventListener("click", () => {
+  const city = document.getElementById("search-input").value.trim();
+  if (city) searchCityWeather(city);
+});
+// Event listener when pressed enter button
+document.getElementById("search-input").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    const city = e.target.value.trim();
+    if (city) searchCityWeather(city);
+  }
+});
+// Event listener when location is added and then pressed enter button
+document.getElementById("search-input").addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    const city = e.target.value.trim();
+    if (city) {
+      searchCityWeather(city);
+    } else {
+      alert("Please enter a city name.");
+    }
+  }
+});
+
+
 //by default current weather loadon page start
 window.addEventListener("load", () => {
   searchCityWeather(currentCity);
