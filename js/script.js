@@ -331,25 +331,29 @@ function showLeftPanel(data) {
 
 function scrollToLeftSectionIfMobile() {
   if (window.innerWidth <= 768) {
-    // Close any open keyboard (iOS, Android)
-    document.activeElement.blur();
+    document.activeElement.blur(); // Close keyboard
 
-    const leftSection = document.querySelector(".left-section");
+    setTimeout(() => {
+      const leftSection = document.querySelector(".left-section");
 
-    if (leftSection) {
-      setTimeout(() => {
-        // Scroll into view
+      if (leftSection) {
+        // Step 1: Try scrollIntoView
         leftSection.scrollIntoView({
           behavior: "smooth",
           block: "start"
         });
 
-        // Manual scroll nudge (fallback for iOS/Android quirks)
-        window.scrollBy(0, -80);
-      }, 300); // Slight delay ensures layout is updated & keyboard closed
-    }
+        // Step 2: Hard fallback for iOS/Android layout quirks
+        const topOffset = leftSection.getBoundingClientRect().top + window.pageYOffset - 20;
+        window.scrollTo({
+          top: topOffset,
+          behavior: "smooth"
+        });
+      }
+    }, 300); // Wait for DOM + keyboard to settle
   }
 }
+
 
 
 // Event Listener
