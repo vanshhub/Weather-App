@@ -1,4 +1,6 @@
-body {
+html,body {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch; /* for iOS */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -9,6 +11,7 @@ body {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .left-section {
