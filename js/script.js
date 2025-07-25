@@ -189,7 +189,8 @@ function searchCityWeather(city, callback) {
     })
     .catch(err => {
       console.error("Search failed:", err);
-
+    });
+  }
 
 // Clicking on a card (e.g., Friday) shows full info in left section
 function setupForecastCardClicks() {
