@@ -368,18 +368,6 @@ document.getElementById("tomorrowBtn").addEventListener("click", () => {
 });
 document.getElementById("next7Btn").addEventListener("click", updateNext7DaysForecast);
 
-// Runs when user clicks into input box (optional)
-document.getElementById("search-input").addEventListener("click", () => {
-  const city = document.getElementById("search-input").value.trim();
-  if (city) searchCityWeather(city);
-});
-// Event listener when pressed enter button
-document.getElementById("search-input").addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    const city = e.target.value.trim();
-    if (city) searchCityWeather(city);
-  }
-});
 // Event listener when location is added and then pressed enter button
 document.getElementById("search-input").addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
