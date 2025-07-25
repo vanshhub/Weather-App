@@ -374,7 +374,8 @@ document.getElementById("search-input").addEventListener("keypress", function (e
     const city = e.target.value.trim();
     if (city) {
       document.getElementById("search-input").blur(); // ✅ closes mobile keyboard
-      searchCityWeather(city, scrollToLeftSectionIfMobile); // ✅ scroll callback
+      searchCityWeather(city, scrollToLeftSectionIfMobile);// ✅ scroll callback
+      e.target.value="";
     } else {
       alert("Please enter a city name.");
     }
