@@ -373,9 +373,9 @@ document.getElementById("search-input").addEventListener("keypress", (e) => {
 document.getElementById("search-input").addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     const city = e.target.value.trim();
-    scrollToLeftSectionIfMobile();
     if (city) {
       searchCityWeather(city);
+      scrollToLeftSectionIfMobile();
     } else {
       alert("Please enter a city name.");
     }
