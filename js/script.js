@@ -77,7 +77,7 @@ function updateSingleDayForecast(dayIndex, label) {
     .catch(err => console.error(`Failed to fetch ${label.toLowerCase()} data:`, err));
 }
 
- // Returns the correct image path based on weather condition string (like "Cloudy", "Sunny")
+// Returns the correct image path based on weather condition string (like "Cloudy", "Sunny")
 function getCustomIcon(condition) {
   condition = condition.toLowerCase();
 
@@ -385,9 +385,9 @@ document.getElementById("search-input").addEventListener("keypress", function (e
   if (e.key === "Enter") {
     const city = e.target.value.trim();
     if (city) {
-     searchCityWeather (city, scrollToLeftSectionIfMobile);
-      alert("Please enter a city name.");
+      searchCityWeather(city, scrollToLeftSectionIfMobile);
     }
+    alert("Please enter a city name.");
   }
 });
 
