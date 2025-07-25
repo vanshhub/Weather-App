@@ -328,7 +328,7 @@ function showLeftPanel(data) {
 
 function scrollToLeftSectionIfMobile() {
   if (window.innerWidth <= 768) {
-    const leftSection = document.getElementById("left-section");
+    const leftSection = document.querySelector("left-section");
     if (leftSection) {
       leftSection.scrollIntoView({ behavior: "smooth" });
     }
