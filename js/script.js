@@ -81,11 +81,11 @@ function updateSingleDayForecast(dayIndex, label) {
 function getCustomIcon(condition) {
   condition = condition.toLowerCase();
 
-  if (condition.includes("partly cloudy")) return "IMAGES/partly_cloudy.png";
-  if (condition.includes("cloud")) return "IMAGES/partly_cloudy.png";
-  if (condition.includes("rain") || condition.includes("drizzle") || condition.includes("shower")) return "IMAGES/Rain_storm.png";
-  if (condition.includes("snow")) return "IMAGES/snowy.png";
-  if (condition.includes("sunny") || condition.includes("clear")) return "IMAGES/slight_touch_happyday.png";
+  if (condition.includes("partly cloudy")) return "images/partly_cloudy.png";
+  if (condition.includes("cloud")) return "images/partly_cloudy.png";
+  if (condition.includes("rain") || condition.includes("drizzle") || condition.includes("shower")) return "images/Rain_storm.png";
+  if (condition.includes("snow")) return "images/snowy.png";
+  if (condition.includes("sunny") || condition.includes("clear")) return "images/slight_touch_happyday.png";
 
   return "IMAGES/partly_cloudy.png"; // fallback
 }
