@@ -201,10 +201,12 @@ function setupForecastCardClicks() {
       if (forecastDataCache.length > index + 1) {
         const selectedDay = forecastDataCache[index + 1];
         showDetailedForecast(selectedDay);
+        scrollToLeftSectionIfMobile(); // <-- Add this line
       }
     });
   });
 }
+
 
 // Called when a forecast card is clicked
 // Shows full weather info for that day in left panel
