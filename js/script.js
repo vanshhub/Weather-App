@@ -326,6 +326,7 @@ function showLeftPanel(data) {
   document.getElementById("headerday").textContent = date.toLocaleDateString('en-IN', {
     weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
   });
+  scrollToLeftSectionIfMobile();
 }
 
 function scrollToLeftSectionIfMobile()
