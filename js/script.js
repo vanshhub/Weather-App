@@ -275,7 +275,7 @@ function updateCityCards() {
         card.querySelector("h3").innerHTML = `${data.location.name}<br><span>${condition}</span>`;
         card.querySelector("img").src = icon;
         card.querySelector("img").alt = condition;
-        card.querySelector("h5").textContent = `${Math.round(data.current.temp_c)}°`;
+        card.querySelector("h2").textContent = `${Math.round(data.current.temp_c)}°`;
 
         // ✅ This triggers left panel to show sunrise/sunset etc.
         card.addEventListener("click", () => {
