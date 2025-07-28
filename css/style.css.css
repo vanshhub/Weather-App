@@ -489,6 +489,7 @@ h2 {
 
     .alldays p {
         font-size: 30px;
+        margin-bottom: 10px;
     }
 
     .cities-info {
@@ -570,11 +571,14 @@ h2 {
     .alldays {
         flex: 1 1 100%;
         max-width: 100%;
-        height: 280px;
+        height: 265px;
     }
 
     .left-section {
         max-width: 100%;
         width: 100%;
+    }
+    .cities-info-2, h2{
+        font-size: 30px;
     }
 }
