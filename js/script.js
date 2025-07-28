@@ -344,13 +344,13 @@ function scrollToLeftSectionIfMobile() {
         });
 
         // Step 2: Hard fallback for iOS/Android layout quirks
-        const topOffset = leftSection.getBoundingClientRect().top + window.pageYOffset -0;
+        const topOffset = leftSection.getBoundingClientRect().top + Window.PageYOffset;
         window.scrollTo({
           top: topOffset,
           behavior: "smooth"
         });
       }
-    }, 300); // Wait for DOM + keyboard to settle
+    }, 200); // Wait for DOM + keyboard to settle
   }
 }
 
