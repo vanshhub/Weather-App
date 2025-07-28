@@ -520,7 +520,7 @@ h2 {
         text-align: center;
     }
 
-    .cities-info-1 h2 {
+    .cities-info-1 h5 {
         font-size: 30px;
         margin-right: 0%;
     }
@@ -533,7 +533,7 @@ h2 {
         font-size: 13px;
     }
 
-    .cities-info-2 h2 {
+    .cities-info-2 h5 {
         font-size: 30px;
         margin-right: 5px;
     }
