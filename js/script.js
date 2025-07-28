@@ -344,7 +344,7 @@ function scrollToLeftSectionIfMobile() {
         });
 
         // Step 2: Hard fallback for iOS/Android layout quirks
-        const topOffset = leftSection.getBoundingClientRect().top + window.pageYOffset - 20;
+        const topOffset = leftSection.getBoundingClientRect().top + window.pageYOffset -0;
         window.scrollTo({
           top: topOffset,
           behavior: "smooth"
