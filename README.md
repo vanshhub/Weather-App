@@ -2,11 +2,9 @@
 
 A responsive web application that displays current weather, tomorrow's forecast, and a 7-day weather outlook for any city using the WeatherAPI.
 
-![Desktop view](./images/Screenshot%2025-07-25%192355.png)
+![Desktop view](./images/desktop-view.png)
+![Mobile view](./images/mobile-view.png)
 
----
-
-![Mobile View](./images/Screenshot%2025-07-25%192355.png)
 
 
 ## 🚀 Live Demo
