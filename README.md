@@ -4,7 +4,7 @@ A responsive web application that displays current weather, tomorrow's forecast,
 
 ![Desktop View](./images/Screenshot%202025-07-25%20192355.png)
 
-![Mobile view](./images/mobile-view.png)
+![Mobile view](./images/Screenshot%202025-07-25%20192414.png)
 
 
 
