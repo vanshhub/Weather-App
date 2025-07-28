@@ -1,16 +1,16 @@
 # 🌤️ Weather App
 
 A responsive web application that displays current weather, tomorrow's forecast, and a 7-day weather outlook for any city using the WeatherAPI.
-
+<h3>here's a Desktop View</h3>
 ![Desktop View](./images/Screenshot%202025-07-25%20192355.png)
-
+<h3>here's a Mobile View</h3>
 ![Mobile view](./images/Screenshot%202025-07-25%20192414.png)
 
 
 
 ## 🚀 Live Demo
 
-👉 [View it on GitHub Pages](https://vanshhub.github.io/Weather-App/)
+👉 [View it on GitHub Pages](https://vanshhub.hub.io/Weather-App/)
 
 ---
 
