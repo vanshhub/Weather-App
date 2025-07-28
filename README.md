@@ -10,7 +10,7 @@ A responsive web application that displays current weather, tomorrow's forecast,
 
 ## 🚀 Live Demo
 
-👉 [View it on GitHub Pages](https://vanshhub.hub.io/Weather-App/)
+👉 [View it on Google Chrome](https://vanshhub.github.io/Weather-App/)
 
 ---
 
