@@ -324,7 +324,7 @@ html,body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0px 15px;
+    margin: 0px 5px;
     gap: 10px;
 }
 
