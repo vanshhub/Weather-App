@@ -105,7 +105,7 @@ function updateNext7DaysForecast() {
 
         const date = new Date(dayData.date);
         const dayName = date.toLocaleDateString("en-IN", { weekday: "long" });
-        const temp = Math.round(dayData.day.current.temp_c);
+        const temp = Math.round(dayData.day.avgtemp_c);
         const condition = dayData.day.condition.text;
         const iconUrl = getCustomIcon(condition);
 
@@ -328,7 +328,6 @@ function showLeftPanel(data) {
   });
   scrollToLeftSectionIfMobile();
 }
-
 //this function works in mobile view
 function scrollToLeftSectionIfMobile() {
   if (window.innerWidth <= 768) {
