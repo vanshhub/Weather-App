@@ -105,7 +105,7 @@ function updateNext7DaysForecast() {
 
         const date = new Date(dayData.date);
         const dayName = date.toLocaleDateString("en-IN", { weekday: "long" });
-        const temp = Math.round(dayData.day.avgtemp_c);
+        const temp = Math.round(dayData.day.current.temp_c);
         const condition = dayData.day.condition.text;
         const iconUrl = getCustomIcon(condition);
 
@@ -152,8 +152,8 @@ function searchCityWeather(city, callback) {
       document.getElementById("precipitation").textContent = `${today.day.daily_chance_of_rain}%`;
       document.getElementById("sunrise-time").textContent = today.astro.sunrise;
       document.getElementById("sunset-time").textContent = today.astro.sunset;
-      document.getElementById("sunriseTime").textContent = getTimeDifferenceLabel(dayData.astro.sunrise, location.localtime);
-      document.getElementById("sunsetTime").textContent = getTimeDifferenceLabel(dayData.astro.sunset, location.localtime);
+      document.getElementById("sunriseTime").textContent = getTimeDifferenceLabel(today.astro.sunrise, location.localtime);
+      document.getElementById("sunsetTime").textContent = getTimeDifferenceLabel(today.astro.sunset, location.localtime);
 
       document.getElementById("headermonth").textContent = date.toLocaleDateString('en-IN', { month: 'long', year: 'numeric' });
       document.getElementById("headerday").textContent = date.toLocaleDateString('en-IN', {
@@ -168,7 +168,7 @@ function searchCityWeather(city, callback) {
 
         const cardDate = new Date(day.date);
         const dayName = cardDate.toLocaleDateString("en-IN", { weekday: "long" });
-        const temp = Math.round(day.day.avgtemp_c);
+        const temp = Math.round(day.day.current.temp_c);
         const cardCondition = day.day.condition.text;
         const cardIcon = getCustomIcon(cardCondition);
 
@@ -220,7 +220,7 @@ function showDetailedForecast(dayData) {
   document.getElementById("current-date").textContent = date.toLocaleDateString("en-IN", {
     day: "numeric", month: "short", year: "numeric"
   });
-  document.getElementById("temperature").textContent = `${Math.round(dayData.day.avgtemp_c)}°C`;
+  document.getElementById("temperature").textContent = `${Math.round(dayData.day.current.temp_c)}°C`;
   document.getElementById("humidity").textContent = `${dayData.day.avghumidity}%`;
   document.getElementById("wind").textContent = `${dayData.day.maxwind_kph} km/h`;
   document.getElementById("precipitation").textContent = `${dayData.day.daily_chance_of_rain}%`;
@@ -329,6 +329,7 @@ function showLeftPanel(data) {
   scrollToLeftSectionIfMobile();
 }
 
+//this function works in mobile view
 function scrollToLeftSectionIfMobile() {
   if (window.innerWidth <= 768) {
     document.activeElement.blur(); // Close keyboard
