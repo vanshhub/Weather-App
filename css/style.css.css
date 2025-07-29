@@ -515,12 +515,13 @@ h2 {
 
     .place p {
         font-size: 15px;
+        text-align: left;
     }
 
     .place,
     .allplace {
         flex: 1;
-        text-align: center;
+        text-align:right;
     }
 
     .cities-info-1 h5 {
