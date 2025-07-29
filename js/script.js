@@ -382,10 +382,6 @@ document.getElementById("search-input").addEventListener("keypress", function (e
   }
 });
 
-
-
-
-
 //by default current weather loadon page start
 window.addEventListener("load", () => {
   searchCityWeather(currentCity);
