@@ -509,7 +509,7 @@ h2 {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: nowrap;
-        gap: 150px;
+        gap: 20px;
 
     }
 
