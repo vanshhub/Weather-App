@@ -1,5 +1,5 @@
 //your API key
-const API_KEY = "d5bd41d49f324e8692663930252407";
+const API_KEY = "74dd6de4da974fe4b60131051250108";
 
 //defaultcity when intial page load
 let currentCity = "mumbai";
